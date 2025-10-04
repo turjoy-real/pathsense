@@ -144,7 +144,7 @@ async def explore_career(data: ExploreRequestV2):
 
     llm_response = await extract_entities_with_chatgpt(prompt, agent="")
     print(llm_response)
-    return jsonify(llm_response)
+    return {"career_paths": jsonify(llm_response)}
 
 # ------------------ Set Career ------------------
 @app.post("/set-career")

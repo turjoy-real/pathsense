@@ -92,6 +92,7 @@ const CareerLearningApp = () => {
       });
       const data = await response.json();
       setExploreData(data);
+      console.log("exploreData:", data);
     } catch (error) {
       console.error("Error exploring careers:", error);
     }
@@ -126,7 +127,8 @@ const CareerLearningApp = () => {
         }),
       });
       const data = await response.json();
-      setLearningPath(data);
+      setLearningPath(selectedRole);
+      console.log("learningPath:", selectedRole);
       setActiveScreen("learn");
     } catch (error) {
       console.error("Error setting career:", error);
